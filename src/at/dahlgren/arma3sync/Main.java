@@ -9,6 +9,7 @@ import at.dahlgren.arma3sync.commands.CommandBuild;
 import at.dahlgren.arma3sync.commands.CommandEvents;
 import at.dahlgren.arma3sync.commands.CommandNewRepository;
 import at.dahlgren.arma3sync.commands.CommandRemoveEvent;
+import at.dahlgren.arma3sync.commands.CommandSetEvents;
 
 import com.beust.jcommander.JCommander;
 
@@ -24,6 +25,7 @@ public class Main {
 		commands.put("events", new CommandEvents());
 		commands.put("new", new CommandNewRepository());
 		commands.put("removeevent", new CommandRemoveEvent());
+		commands.put("setevents", new CommandSetEvents());
 		
 		for (String key : commands.keySet()) {
 			jc.addCommand(key, commands.get(key));
