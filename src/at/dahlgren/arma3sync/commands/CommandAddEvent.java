@@ -27,7 +27,7 @@ public class CommandAddEvent extends Command {
 			event.setName(name);
 			
 			for (String addon : addons) {
-				event.getAddonNames().put(addon, true);
+				event.getAddonNames().put(addon, false);
 			}
 			
 			repositoryService.addEvent(repository, event);
